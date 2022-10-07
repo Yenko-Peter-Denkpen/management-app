@@ -22,7 +22,7 @@ const handleSubmit =(e)=>{
 
     return (
       <form onSubmit={handleSubmit} className='form'>
-      <div className='col - sm 12 col-md-6 col-ig-4 col-x1-4 m-3 p-3 bg-info'>
+      <div className='col - sm 12 col-md-6 col-ig-4 col-x1-4 m-3 p-3 bg-warning'>
       <div className='form-group m-2'>
       <label htmlFor="username">username</label>
       <input type="text" className='form-control' placeholder="Enter username"

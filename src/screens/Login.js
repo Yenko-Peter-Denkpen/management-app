@@ -21,7 +21,7 @@ function Login() {
   return (
     
     <form onSubmit={handleSubmit} className="form">
-      <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 m-3 p-3 bg-info">
+      <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 m-3 p-3 bg-warning">
       <h2>Welcome to Rent Management app!!</h2>
         <div className="form-group m-2">
           <label htmlFor="email">email</label>

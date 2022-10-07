@@ -130,7 +130,7 @@ function AddHouse({ submit }) {
               
            
             </fieldset>
-            <button className="form" onClick={handleForm}>
+            <button className="btn btn-btn primary" onClick={handleForm}>
               Add new house
             </button>
           </form>
