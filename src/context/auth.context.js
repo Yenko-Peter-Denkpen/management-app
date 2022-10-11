@@ -6,13 +6,13 @@ const AuthProvider = AuthContext.Provider;
 function AuthContextProvider({ children }) {
   const { success, setSuccess } = useState(false);
   const { error, setError } = useState(null);
-  const { loading, setLoading } = useState(false);
+  
   const { user, setUser } = useState(null);
 
   //login function
   const authLogin = async (email, password) => {
-    setLoading(true);
-    await fetch("/https://worrisome-hem-hen.cyclic.app/api/users/login", {
+    
+    await fetch("https://worrisome-hem-hen.cyclic.app/api/users/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -30,13 +30,13 @@ function AuthContextProvider({ children }) {
       .catch((err) => {
         setError(err);
       });
-    setLoading(false);
+   
   };
 
   //signup function
   const authRegister = async (username, email, password) => {
-    setLoading(true);
-    await fetch("/https://worrisome-hem-hen.cyclic.app/api/users/register", {
+    
+    await fetch("https://worrisome-hem-hen.cyclic.app/api/users/register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ function AuthContextProvider({ children }) {
       .catch((err) => {
         setError(err);
       });
-    setLoading(false);
+   
   };
   
   //logout function
@@ -68,7 +68,7 @@ function AuthContextProvider({ children }) {
       value={{
         success,
         error,
-        loading,
+       
         user,
         authLogin,
         authRegister,
