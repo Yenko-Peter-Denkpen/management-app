@@ -4,10 +4,10 @@ const AuthContext = createContext();
 const AuthProvider = AuthContext.Provider;
 
 function AuthContextProvider({ children }) {
-  const { success, setSuccess } = useState(false);
-  const { error, setError } = useState(null);
+  const [ success, setSuccess ] = useState(false);
+  const [ error, setError ] = useState(null);
   
-  const { user, setUser } = useState(null);
+  const [user, setUser ] = useState(null);
 
   //login function
   const authLogin = async (email, password) => {
@@ -15,7 +15,7 @@ function AuthContextProvider({ children }) {
     await fetch("https://worrisome-hem-hen.cyclic.app/api/users/login", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': "application/json",
       },
       body: JSON.stringify({
         email,
@@ -39,7 +39,7 @@ function AuthContextProvider({ children }) {
     await fetch("https://worrisome-hem-hen.cyclic.app/api/users/register", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        'Content-Type': "application/json",
       },
       body: JSON.stringify({
         username,
