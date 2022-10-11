@@ -12,7 +12,7 @@ function AuthContextProvider({ children }) {
   //login function
   const authLogin = async (email, password) => {
     setLoading(true);
-    await fetch("/api/users/login", {
+    await fetch("/https://worrisome-hem-hen.cyclic.app/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -36,7 +36,7 @@ function AuthContextProvider({ children }) {
   //signup function
   const authRegister = async (username, email, password) => {
     setLoading(true);
-    await fetch("/api/users/register", {
+    await fetch("/https://worrisome-hem-hen.cyclic.app//register", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

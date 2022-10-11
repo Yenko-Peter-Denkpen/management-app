@@ -10,7 +10,9 @@ import Bungalow from "./screens/Bungalow";
 import SelfContain from "./screens/SelfContain";
 import Singleroom from "./screens/Singleroom";
 import Compoundhouse from "./screens/Compoundhouse";
-import AddHouse from "./components/AddHouse"
+import AddHouse from "./components/AddHouse";
+import Contact from "./components/Contact"
+
 function App() {
   return (
     <div>
@@ -18,6 +20,7 @@ function App() {
 
       <Routes>
       <Route path="/home" element={<Home />} />
+      <Route path="/contact" element={<Contact />} />
       <Route path="/" element={<DashBoard />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />

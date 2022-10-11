@@ -1,22 +1,22 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { AuthContext } from "../context/auth.context";
-import DashBoard from "../components/DashBoard";
+import React, { useState,useContext } from "react";
+import { Link ,useNavigate} from "react-router-dom";
+ import { AuthContext } from "../context/auth.context";
+
 
 function Login() {
   const navigate = useNavigate();
-  const { success, loading, user, authLogin } = useContext(AuthContext);
+   const { success, authLogin } = useContext(AuthContext);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  useEffect(() => {
+   useEffect(() => {
     if (success) {
-      navigate("/home");
+       navigate("/home");
     }
-  }, [success]);
+   }, [success]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    authLogin(email, password);
+   authLogin(email, password)
   };
   return (
     
@@ -43,8 +43,8 @@ function Login() {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary" m-2>
-          {loading ? "Loading.." : "Login"}{" "}
+        <button type="submit" className="btn btn-info" m-2>
+         <Link to="/home">Login</Link>
         </button>
         <div>
           <h4>i dont have an account?</h4>

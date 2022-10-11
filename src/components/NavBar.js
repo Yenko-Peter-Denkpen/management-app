@@ -26,21 +26,24 @@ function NavBar() {
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="/category">Category</a>
+            <a class="nav-link active" href="/category">Category</a>
           </li>
           <li class="nav-item">
-          <a class="nav-link" href="/about">About</a>
+          <a class="nav-link active" href="/about">About</a>
         </li>
           <li class="nav-item">
-          <a class="nav-link" href="/addhouse">Addhouse</a>
+          <a class="nav-link active" href="/contact">Contact</a>
         </li>
           <li class="nav-item">
-            <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link active" href="/addhouse">Addhouse</a>
+        </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/login">Login</a>
         
           </li>
           <li class="nav-item">
            
-            <a class="nav-link" href="/register">Register</a>
+            <a class="nav-link active" href="/register">Register</a>
           </li>
        
          

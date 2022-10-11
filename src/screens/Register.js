@@ -1,23 +1,24 @@
-import {useContext, useEffect, useState} from 'react'
-import {Link, useNavigate,} from "react-router-dom"
-import {AuthContext}from "../context/auth.context"
+import { useState} from 'react'
+import {Link} from "react-router-dom"
+ import {AuthContext}from "../context/auth.context"
 
 function Register() {
-  const navigate=useNavigate();
-  const {success,loading,user,authRegister}=useContext(AuthContext);
+  
+   const {success, authRegister}=useContext(AuthContext);
+   
   const [username, setUsername]=useState("")
   const [email,setEmail]=useState("");
   const[password,setPassword]=useState("");
-useEffect(()=>{
+ useEffect(()=>{
   if(success){
     navigate("/home");
-  }
-},
-[success]);
+   }
+ },
+ [success]);
 
 const handleSubmit =(e)=>{
   e.preventDefault();
-  authRegister( username,email,password);
+ authRegister(username,email, password)
 };
 
     return (
@@ -41,7 +42,9 @@ const handleSubmit =(e)=>{
       value={password}
       onChange={(e)=>setPassword(e.target.value)}/>
       </div>
-      <button type='submit' className='btn btn-primary m-2' m-2>{loading ? "Loading..." : "create account"} </button>
+       <button type='submit' className='btn btn-info m-2' m-2>
+       <Link to="/home">Register</Link>
+       </button>
       <div className='row'>
       <p>i already have an account</p>
       <Link to="/" className='nav-link'>login</Link>

@@ -6,13 +6,13 @@ import NavBar from './NavBar';
 function DashBoard() {
   return (
   
-    <div>
+    <div className='landingpage'>
   <NavBar/>
     <div><h3>RENT MANAGEMENT DASHBOARD</h3></div>
     
     
   
-  <div className="heroText">
+  <div className="heroText ">
   <h2>Rent Management APP</h2><hr/>
   <p>You are welcome to rent management App. 
   We provide you access to vacant rooms within your locality.

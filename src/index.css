@@ -102,6 +102,14 @@ border-radius: 40px;
   align-self: auto;
 }
 
+footer{
+  position:sticky;
+   
+}
+
+
+
+
 .landingpage{
   height:90vh;
   width: 100%;
@@ -132,7 +140,7 @@ p{
   font-size: 18px;
 }
 footer{
-  background-color: black;
+  background-color:teal;
   height: 80px;
 }
 .footer-copyright{
