@@ -1,4 +1,4 @@
-import React, { useState,useContext } from "react";
+import React, { useState,useContext ,useEffect} from "react";
 import { Link ,useNavigate} from "react-router-dom";
  import { AuthContext } from "../context/auth.context";
 
@@ -44,7 +44,7 @@ function Login() {
           />
         </div>
         <button type="submit" className="btn btn-info" m-2>
-         <Link to="/home">Login</Link>
+         <Link to="/">Login</Link>
         </button>
         <div>
           <h4>i dont have an account?</h4>

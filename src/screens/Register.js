@@ -1,11 +1,11 @@
-import { useState} from 'react'
-import {Link} from "react-router-dom"
+import { useState, useContext,useEffect} from 'react'
+import {Link, useNavigate} from "react-router-dom"
  import {AuthContext}from "../context/auth.context"
 
 function Register() {
-  
+  const navigate = useNavigate();
    const {success, authRegister}=useContext(AuthContext);
-   
+
   const [username, setUsername]=useState("")
   const [email,setEmail]=useState("");
   const[password,setPassword]=useState("");
