@@ -1,5 +1,6 @@
 import React from 'react'
-
+import { AuthContext } from "../context/auth.context"
+import {FaSignOutAlt } from "react-icons/fa"
 
 
 
@@ -10,8 +11,14 @@ import React from 'react'
 
 
 function NavBar() {
+  // useEffect(() => {
+  //      if (!user)  {
+  //         navigate("/login");
+  //      }
+  //  }, [user]);
+ 
   return (
-    <div>
+    <div className='fort'>
     <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
     <div class="container-fluid">
    
@@ -38,12 +45,8 @@ function NavBar() {
           <a class="nav-link active" href="/addhouse">Addhouse</a>
         </li>
           <li class="nav-item">
-            <a class="nav-link active" href="/login">Login</a>
+            <a class="nav-link active" href="/">Logout</a>
         
-          </li>
-          <li class="nav-item">
-           
-            <a class="nav-link active" href="/register">Register</a>
           </li>
        
          
@@ -52,6 +55,9 @@ function NavBar() {
           <input class="form-control me-sm-2" type="text" placeholder="Search">
           </input>
           <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+          <li class="nav-item">
+                
+  </li>
         </form>
       </div>
     </div>

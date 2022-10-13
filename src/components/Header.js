@@ -3,16 +3,11 @@ import { Link, useNavigate } from "react-router-dom"
 import { AuthContext } from "../context/auth.context"
 import {FaSignOutAlt, FaUser } from "react-icons/fa"
 
+
 function Header() {
     const navigate = useNavigate();
-    const { success, loading, user, authLogout} = useContext(AuthContext);
+    const {authLogout} = useContext(AuthContext);
 
-useEffect (() =>{
-  if (!user) {
-    navigate("/login");
-}
-
-}, [user]);
 
 
   return (
@@ -43,13 +38,17 @@ useEffect (() =>{
         <li class="nav-item">
           <a class="nav-link" href="#">category</a>
         </li>
+        <li class="nav-item">
+           
+        <a class="nav-link" href="/Logout">Logout</a>
+      </li>
         
       </ul>
       <ul class= "navbar-nav-ml-auto">
             <li class="nav-item">
               <a class="nav-link" href="#">
                 <FaUser />
-                {user.username}
+               
               </a>
             </li>
             <li class="nav-item">
